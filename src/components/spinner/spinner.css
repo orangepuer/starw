@@ -1,0 +1,96 @@
+@keyframes lds {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}
+.lds div { box-sizing: border-box!important }
+.lds > div {
+  position: absolute;
+  width: 144px;
+  height: 144px;
+  top: 2px;
+  left: 28px;
+  border-radius: 50%;
+  border: 16px solid #000;
+  border-color: #8a94e1 transparent #8a94e1 transparent;
+  animation: lds 1s linear infinite;
+}
+
+.lds > div:nth-child(2), .lds > div:nth-child(4) {
+  width: 108px;
+  height: 108px;
+  top: 20px;
+  left: 46px;
+  animation: lds 1s linear infinite reverse;
+}
+.lds > div:nth-child(2) {
+  border-color: transparent #07114d transparent #07114d
+}
+.lds > div:nth-child(3) { border-color: transparent }
+.lds > div:nth-child(3) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.lds > div:nth-child(3) div:before, .lds > div:nth-child(3) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -16px;
+  left: 48px;
+  background: #8a94e1;
+  border-radius: 50%;
+  box-shadow: 0 128px 0 0 #8a94e1;
+}
+.lds > div:nth-child(3) div:after {
+  left: -16px;
+  top: 48px;
+  box-shadow: 128px 0 0 0 #8a94e1;
+}
+
+.lds > div:nth-child(4) { border-color: transparent; }
+.lds > div:nth-child(4) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.lds > div:nth-child(4) div:before, .lds > div:nth-child(4) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -16px;
+  left: 30px;
+  background: #07114d;
+  border-radius: 50%;
+  box-shadow: 0 92px 0 0 #07114d;
+}
+.lds > div:nth-child(4) div:after {
+  left: -16px;
+  top: 30px;
+  box-shadow: 92px 0 0 0 #07114d;
+}
+.loading-spinner-double-ring {
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.lds {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.lds div { box-sizing: content-box; }
+
+.loading-spinner-double-ring {
+  margin: 0 auto;
+}
